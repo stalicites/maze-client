@@ -1,0 +1,89 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#message-container {
+    width: 580px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#uicontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.error {
+    color: red;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 2.5px;
+    background-color: rgb(68, 171, 255);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+input {
+    border-width: 1px;
+    outline: none;
+}
+
+#text {
+    margin: 0;
+    height: 20px;
+    width: 475px;
+}
+
+#container {
+    z-index: 99999999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#input {
+    height: 20px;
+}
+
+#messages {
+    height: 560px;
+    overflow-y: scroll;
+}
+
+@media (max-width: 1200px) {
+    #message-container {
+        width: 430px;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        padding: 10px;
+    }
+    canvas {
+        width: 450px;
+        height: 450px;
+    }
+    #messages {
+        height: 410px;
+        overflow-y: scroll;
+    }
+    #text {
+        margin: 0;
+        height: 20px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css" media="(max-width: 1200px)">
+    <link rel="stylesheet" href="style3.css" media="(max-width: 900px)">
+    <script src = "socket.io.js"></script>
+</head>
+<body>
+    <div style="display: flex; flex-direction: row;" id = "container">
+        <div id = "game-container">
+            <canvas id = "canvas" width="600" ; height="600"></canvas>
+            <div id = "ui-container">
+                <div>
+                    <button onclick='connection.emit("dir", "up")'>Up</button>
+                    <button onclick='connection.emit("dir", "down")'>Down</button>
+                    <button onclick='connection.emit("dir", "left")'>Left</button>
+                    <button onclick='connection.emit("dir", "right")'>Right</button>
+                </div>
+                <div>
+                    <input type="text" placeholder="Set your username" id = "input" autocomplete="off">
+                    <button id = "set-username">Set</button>
+                </div>
+            </div>
+        </div>
+        <div id = "message-container">
+            <div id = "messages">
+                <h1>Chat Room</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Say something!" id = "text" autocomplete="off">
+                <button id = "send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "script.js"></script>
+<script src="render.js"></script>
+</html>
